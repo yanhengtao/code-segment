@@ -179,3 +179,38 @@ System.out.println("Locale China : " + format.format(1000));
 format = NumberFormat.getCurrencyInstance(Locale.US);
 System.out.println("Locale US : " + format.format(1000));
 ```
+
+#### 11、异或运算符用于两个操作数互换数值
+> 异或运算符是用符号“^”表示的，其运算规律是：<br/>
+> 两个操作数的位中，相同则结果为0，不同则结果为1。
+
+```
+int a = 10;
+int b = 20;
+a = a ^ b;
+b = b ^ a;
+a = a ^ b;
+System.out.println("a=" + a);
+System.out.println("b=" + b);
+```
+
+#### 12、适配器类使用
+```
+public MyFrame(String title) {
+	setTitle(title);
+	setSize(400, 300);
+	addWindowListener(new WindowAdapter() {
+			
+		@Override
+		public void windowClosing(WindowEvent e) {
+			System.out.println("windows closed and app is closed ...");
+			System.exit(0);
+		}
+			
+	});
+}
+
+public static void main(String[] args) {
+	new MyFrame("Windows closed!").setVisible(true);
+}
+```
