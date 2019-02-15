@@ -214,3 +214,24 @@ public static void main(String[] args) {
 	new MyFrame("Windows closed!").setVisible(true);
 }
 ```
+
+### 13、获取当前日期
+```
+// 可以方便地修改日期格式
+Date now = new Date();
+SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+String nowStr = dateFormat.format(now);
+System.out.println(nowStr);
+
+// 可以对每个时间域单独修改
+Calendar c = Calendar.getInstance();
+
+int year = c.get(Calendar.YEAR);
+int month = c.get(Calendar.MONTH) + 1;
+int date = c.get(Calendar.DATE);
+int hour = c.get(Calendar.HOUR_OF_DAY);
+int minute = c.get(Calendar.MINUTE);
+int second = c.get(Calendar.SECOND);
+
+System.out.println(year + "/" + month + "/" + date + " " + hour + ":" + minute + ":" + second);
+```
