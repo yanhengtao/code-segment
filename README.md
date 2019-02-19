@@ -235,3 +235,51 @@ int second = c.get(Calendar.SECOND);
 
 System.out.println(year + "/" + month + "/" + date + " " + hour + ":" + minute + ":" + second);
 ```
+
+##### 14、String转换成byte[]或者byte[]转换成String
+```
+// Original String
+String string = "hello world";
+
+// Convert to byte[]
+byte[] bytes = string.getBytes();	// 或者getBytes("utf-8")
+ 
+// Convert back to String
+String s = new String(bytes);
+```
+
+##### 15、计算三角形面积
+```
+double a = 3, b = 4, c = 5;
+double p = (a + b + c) / 2;
+double val = p * (p - a) * (p - b) * (p - c);
+double area = Math.sqrt(val);
+System.out.println("area = " + area);
+```
+
+##### 16、格式化数字展示形式
+```
+double val = 190089.87;
+DecimalFormat df = new DecimalFormat("#,###.00"); 
+String format = df.format(val);
+System.out.println("format val : " + format);
+```
+
+##### 17、Java调用dll的例子
+```
+// 定义接口Testdll，继承自com.sun.jna.Library
+public interface Testdll extends Library {
+	
+	// msvcrt为dll名称, msvcrt目录的位置为:C:\Windows\System32下面
+	Testdll instance = (Testdll) Native.loadLibrary((Platform.isWindows() ? "msvcrt" : "c"),
+			Testdll.class);
+	
+	// printf为msvcrt.dll中的一个方法
+	void printf(String format, Object... args);
+}
+
+public static void main(String[] args) {
+	// 调用printf打印信息
+	Testdll.instance.printf("Hello JNA!");
+}
+```
