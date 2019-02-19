@@ -283,3 +283,16 @@ public static void main(String[] args) {
 	Testdll.instance.printf("Hello JNA!");
 }
 ```
+```
+<dependency>
+	<groupId>net.java.dev.jna</groupId>
+	<artifactId>jna</artifactId>
+	<version>4.0.0</version>
+</dependency>
+
+<dependency>
+	<groupId>net.java.dev.jna</groupId>
+	<artifactId>jna-platform</artifactId>
+	<version>4.0.0</version>
+</dependency>
+```
