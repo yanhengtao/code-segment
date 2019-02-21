@@ -320,3 +320,19 @@ public static int binarySearch(int[] arr, int key) {
     return -1;
 }
 ```
+
+##### 19、Java递归删除一个目录下文件和文件夹
+```
+// Java递归删除一个目录下文件和文件夹
+public static void deleteDir(File dir) {
+    if (dir.isDirectory()) {
+        String[] children = dir.list();
+	System.out.println(children);
+	// 递归删除目录中的子目录下
+	for (int i = 0; i < children.length; i++) {
+		deleteDir(new File(dir, children[i]));
+	}
+    }
+    dir.delete();
+}
+```
