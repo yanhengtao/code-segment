@@ -296,3 +296,27 @@ public static void main(String[] args) {
 	<version>4.0.0</version>
 </dependency>
 ```
+
+##### 18、二分查找
+
+> 1. 必须采用顺序存储结构
+> 2. 必须按关键字大小有序排列
+
+```
+public static int binarySearch(int[] arr, int key) {
+    int low = 0;
+    int high = arr.length - 1;
+
+    while (low <= high) {
+	int mid = (low + high) / 2;
+	if (key < arr[mid]) {
+		high = mid - 1;
+	} else if (key > arr[mid]) {
+		low = mid + 1;
+	} else {
+		return mid;
+	}
+    }
+    return -1;
+}
+```
