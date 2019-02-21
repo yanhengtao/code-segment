@@ -344,3 +344,11 @@ long start = System.currentTimeMillis();
 long end = System.currentTimeMillis();
 System.out.println("程序运行时间 : " + (end - start) / 1000 + " s");
 ```
+
+##### 21、获取两个数之间的随机数
+```
+int start = 0;
+int end = 100;
+int val = (int) (Math.random() * (end - start) + start);
+System.out.println(start + "与" + end + "之间的随机数：" + val);
+```
