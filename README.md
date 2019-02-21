@@ -336,3 +336,11 @@ public static void deleteDir(File dir) {
     dir.delete();
 }
 ```
+
+##### 20、计算程序运行时常
+```
+long start = System.currentTimeMillis();
+...
+long end = System.currentTimeMillis();
+System.out.println("程序运行时间 : " + (end - start) / 1000 + " s");
+```
