@@ -337,7 +337,7 @@ public static void deleteDir(File dir) {
 }
 ```
 
-##### 20、计算程序运行时常
+##### 20、计算程序运行时长
 ```
 long start = System.currentTimeMillis();
 ...
