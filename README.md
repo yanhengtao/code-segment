@@ -352,3 +352,16 @@ int end = 100;
 int val = (int) (Math.random() * (end - start) + start);
 System.out.println(start + "与" + end + "之间的随机数：" + val);
 ```
+
+##### 22、Swing设置主窗体位置居中
+```
+int windowWidth = getWidth();
+int windowHeight = getHeight();
+
+Toolkit kit = Toolkit.getDefaultToolkit();
+Dimension screenSize = kit.getScreenSize();
+int screenWidth = screenSize.width; // 获取屏幕的宽
+int screenHeight = screenSize.height; // 获取屏幕的高
+
+setLocation((screenWidth - windowWidth) / 2, (screenHeight - windowHeight) / 2);
+```
