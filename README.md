@@ -365,3 +365,39 @@ int screenHeight = screenSize.height; // 获取屏幕的高
 
 setLocation((screenWidth - windowWidth) / 2, (screenHeight - windowHeight) / 2);
 ```
+
+#### 23、map的遍历方式
+> 方式一
+```
+Map<String, String> map = new HashMap<String, String>();
+for (Map.Entry<String, String> entry : map.entrySet()) {
+	System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+}
+```
+> 方式二 ： 如果只需要map中的键或者值，你可以通过keySet或values来实现遍历
+```
+Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+for (Integer key : map.keySet()) {
+	System.out.println("Key = " + key);
+}
+for (Integer value : map.values()) {
+	System.out.println("Value = " + value);
+}
+```
+> 方法三: 使用Iterator遍历
+```
+Map<String, String> map = new HashMap<String, String>();
+Iterator<Map.Entry<String, String>> entries = map.entrySet().iterator();
+while (entries.hasNext()) {
+	Map.Entry<String, String> entry = entries.next();
+	System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+}
+```
+> 方法四: 通过键找值遍历（效率低）
+```
+Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+for (Integer key : map.keySet()) {
+	Integer value = map.get(key);
+	System.out.println("Key = " + key + ", Value = " + value);
+}
+```
