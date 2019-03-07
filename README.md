@@ -403,3 +403,23 @@ for (Integer key : map.keySet()) {
 ```
 
 - [参考地址](https://www.cnblogs.com/fqfanqi/p/6187085.html)
+
+#### 24、查询子串位置
+public static void searchString(String str, String subStr) {
+	if (str.length() < subStr.length()) {
+		return;
+	}
+
+	int count = 1;
+	int startIndex = 0;
+	while (true) {
+		int index = str.indexOf(subStr);
+		if (index == -1) {
+			break;
+		}
+		System.out.println("第" + count + "个子串位置为：" + (index + startIndex));
+		str = str.substring(index + 1);
+		startIndex = index + subStr.length();
+		count++;
+	}
+}
