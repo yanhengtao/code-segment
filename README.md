@@ -405,6 +405,7 @@ for (Integer key : map.keySet()) {
 - [参考地址](https://www.cnblogs.com/fqfanqi/p/6187085.html)
 
 #### 24、查询子串位置
+```
 public static void searchString(String str, String subStr) {
 	if (str.length() < subStr.length()) {
 		return;
@@ -423,3 +424,4 @@ public static void searchString(String str, String subStr) {
 		count++;
 	}
 }
+```
