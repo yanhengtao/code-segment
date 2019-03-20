@@ -456,3 +456,18 @@ private static void printArray(int[][] arr) {
 	}
 }
 ```
+
+#### 26、输出重定向
+```
+try {
+	PrintStream out = System.out;
+	PrintStream ps = new PrintStream("./log.txt");
+	System.setOut(ps); // 设置使用新的输出流
+	System.out.println("你好嘛?");
+	System.setOut(out); // 恢复原有输出流
+	System.out.println("我很好!");
+} catch (FileNotFoundException e) {
+	e.printStackTrace();
+}
+```
+
