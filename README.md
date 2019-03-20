@@ -471,3 +471,13 @@ try {
 }
 ```
 
+#### 27、数值交换
+```
+int A = 88;
+int B = 99;
+System.out.println("A=" + A + ",B=" + B);
+A = A ^ B;
+B = B ^ A;
+A = A ^ B;
+System.out.println("A=" + A + ",B=" + B);
+```
