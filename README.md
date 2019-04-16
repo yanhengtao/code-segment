@@ -511,3 +511,15 @@ System.out.println("Locale.ENGLISH：" + format.format(number));
 format = NumberFormat.getCurrencyInstance(Locale.TAIWAN);
 System.out.println("Locale.TAIWAN：" + format.format(number));
 ```
+
+#### 30、java中printf支持的格式
+```
+%c    单个字符 
+%d    十进制整数 
+%f    十进制浮点数 
+%o    八进制数 
+%s    字符串 
+%u    无符号十进制数 
+%x    十六进制数 
+%%    输出百分号%
+```
