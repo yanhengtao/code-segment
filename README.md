@@ -31,7 +31,6 @@ public class GenSerialize {
 
 ##### 3、Java判断字符串是否为数字(包括浮点类型)
 
-
 ```
 public static boolean isNumber(String str){
     String reg = "^[0-9]+(.[0-9]+)?$";
@@ -522,4 +521,26 @@ System.out.println("Locale.TAIWAN：" + format.format(number));
 %u    无符号十进制数 
 %x    十六进制数 
 %%    输出百分号%
+```
+
+#### 31、java回文判断
+
+```
+String palindrome = "abcddcba";
+char[] charArray = palindrome.toCharArray();
+
+boolean flag = true;
+int middle = charArray.length;
+for (int i = 0; i < middle; i++) {
+	if (charArray[i] != charArray[charArray.length - 1 - i]) {
+		flag = false;
+		break;
+	}
+}
+	
+if (!flag) {
+	System.out.printf("%s is not palindrome.", palindrome);
+} else {
+	System.out.printf("%s is palindrome.", palindrome);
+}
 ```
